@@ -1,8 +1,8 @@
 {
-  "name": "my_website",
+  "name": "Katrina_Soft_Wear_Developer",
   "version": "0.1.0",
   "private": true,
-  "homepage":"http://KatrinaGW.github.io/my_website", 
+  "homepage":"http://KatrinaGW.github.io/soft_wear_developer", 
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
