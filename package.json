@@ -2,7 +2,7 @@
   "name": "Katrina_Soft_Wear_Developer",
   "version": "0.1.0",
   "private": true,
-  "homepage":"http://KatrinaGW.github.io/my_website", 
+  "homepage": "http://KatrinaGW.github.io/my_website",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -17,8 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +39,10 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.1",
+    "gh-pages": "^6.1.1",
+    "paper": "^0.12.18"
   }
 }
