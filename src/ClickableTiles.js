@@ -10,49 +10,27 @@ const PERSONAL = 2;
 const NONE = 3;
 
 export const ClickableTiles = () => {
-  //TODO: Reduce to one state variable
-  const [showSingle, setShowSingle] = useState(false);
-  const [chosenTile, setChosenTile] = useState(Number);
   const [bio, setBio] = useState()
-
-  useEffect(() => {
-    if(chosenTile == INTERN){
-      setBio(InternBio);
-    }else if(chosenTile==STUDENT){
-      setBio(StudentBio);
-    }else if(chosenTile==PERSONAL){
-      setBio(PersonalBio);
-    }else{
-      setBio(undefined);
-    }
-
-  }, [chosenTile]);
-
-
-  const tileClicked = (option) => {
-    setShowSingle(!showSingle);
-    setChosenTile(option);
-  }
 
       return (
         <Grid container spacing={6} justifyContent="center" alignItems="center">
-        {!showSingle && 
+        {!bio && 
         <>
           <Grid size={{ xs: 4, md: 4 }}>
-            <Item onClick={()=>tileClicked(INTERN)}>About Me: The Software Engineering Intern</Item>
+            <Item onClick={()=>setBio(InternBio)}>About Me: The Software Engineering Intern</Item>
           </Grid>
           <Grid size={{ xs: 4, md: 4 }}>
-            <Item onClick={()=>tileClicked(STUDENT)}>About Me: The Student</Item>
+            <Item onClick={()=>setBio(StudentBio)}>About Me: The Student</Item>
           </Grid>
           <Grid size={{ xs: 4, md: 4 }}>
-            <Item onClick={()=>tileClicked(PERSONAL)}>About Me: The Person</Item>
+            <Item onClick={()=>setBio(PersonalBio)}>About Me: The Person</Item>
           </Grid>
         </>
         }
         {
-          showSingle && 
+          bio && 
           <Grid size={{ xs: 8, md: 8 }}>
-          <LongItem onClick={()=>tileClicked(NONE)}>{bio}</LongItem>
+          <LongItem onClick={()=>setBio(undefined)}>{bio}</LongItem>
         </Grid>
         }
         
